@@ -20,5 +20,6 @@ contract Mint is Ownable, ERC721Enumerable {
             _safeMint(msg.sender, supply + i);
             balances[msg.sender]++;
         }
+        console.log(balances[msg.sender]);
     }
 }

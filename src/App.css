@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  
+}
+
+.button{
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
 }
 
 .App-logo {
@@ -21,6 +28,15 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: rgb(23, 95, 210);
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
   color: white;
 }
 
@@ -35,4 +51,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.background-red {
+  background-color: red;
+}
+
+.background-blue {
+  background-color: blue;
 }

@@ -20,6 +20,13 @@ async function main() {
   await mint.deployed();
 
   console.log("Mint deployed to:", mint.address);
+
+  const Election = await hre.ethers.getContractFactory("Election");
+  const election = await Election.deploy();
+
+  await election.deployed();
+
+  console.log("Election Deployed to: ", election.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

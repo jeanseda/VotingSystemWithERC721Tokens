@@ -3,10 +3,9 @@ import './App.css';
 import mintAbi from "./mintAbi.json";
 import {ethers, BigNumber} from "ethers";
 import {useEffect, useState} from "react";
+import { render } from '@testing-library/react';
 
-
-const mintExampleAddress = "0x7a3f2Ca087D91534F79DbE0436AB059EBfcCD127";
-const electionAddress = "0xB312D1fA9b9180C36CF988e855bbB73660F58C89";
+const mintExampleAddress = "0x22931E2D25725D3B984b1ca2F44697797f551D1E";
 
 function App() {
   //Connecting
@@ -71,6 +70,7 @@ function App() {
       This is how you create a mint button
       {accounts.length && (
         <div>
+          <h1>Account: {accounts[0]}</h1>
           <button class ="button button1" onClick={()=> setMintAmount( mintAmount -1)}>-</button>
             {mintAmount}
           <button class ="button button2" onClick={()=> setMintAmount(mintAmount+1)}>+</button>

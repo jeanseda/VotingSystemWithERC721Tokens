@@ -18,7 +18,7 @@ describe("Election", function () {
     expect(await electionInstance.candidatesCount()).to.equal("3");
   });
 
-  it("initializes the candidates with the correct value", async function() {
+  it("initializes the candidates with the correct values", async function() {
    let candidate = await electionInstance.candidates(1);
 
    assert.equal(candidate[0],1,"the id matches the candidate");
@@ -35,7 +35,5 @@ describe("Election", function () {
    assert.equal(candidate[1],"Candidate 3", "The candidate name matches")
    assert.equal(candidate[2],0, "The votes matches");
   });
-
-
 
 });
